@@ -3,19 +3,32 @@ html, body{
     background-color: #1a1a1a;
     background-image: url("./src/wal/desert.png");
     background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
     font-family: "Fira Code", monospace;
 }
 .bartender{
     display: flex;
     justify-content: space-between;
-    background-color: #1a1a1a;
+    background-color: #1a1a1adc;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
     padding-left: 20px;
     padding-right: 20px;
+}
+.clock{
+    line-break:strict;
+    display: flex;
+    padding: 15px;
+    white-space: unset;
+}
+.clockr{
+    padding-left: 5px;
 }
 .win{
     position: absolute;
     border: solid #fff 5px;
+    border-radius: 10px;
     background-color: #1a1a1a9a;
     padding: 25px;
     width: 400px;
