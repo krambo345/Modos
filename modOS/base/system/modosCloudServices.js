@@ -1,0 +1,48 @@
+import { getSHA256Hash } from "boring-webcrypto-sha256";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics"; const firebaseConfig = {
+
+  apiKey: "AIzaSyBw3Uh79g_3__fs2LyLNo7Z7dgN7QZYqJs",
+
+  authDomain: "modos-webos.firebaseapp.com",
+
+  projectId: "modos-webos",
+
+  storageBucket: "modos-webos.firebasestorage.app",
+
+  messagingSenderId: "403933601096",
+
+  appId: "1:403933601096:web:6cd2d539530a8f00b8e77d",
+
+  measurementId: "G-Z5TBYHEBZW"
+
+}
+const app = initializeApp(firebaseConfig);
+
+const analytics = getAnalytics(app);
+
+import { doc, Firestore, getFirestore, setDoc } from "firebase/firestore";
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://support.google.com/firebase/answer/7015592
+
+
+
+// Initialize Cloud Firestore and get a reference to the service
+const firestore = getFirestore();
+
+const username = 'bill';
+const password = '1234bobster'
+makeuser(username, password)
+
+const user = doc(firestore, `user/${username}`)
+async function makeuser(uname, pwd) {
+  const encryptpwd = await getSHA256Hash(pwd);
+  
+  const docData = {
+    username: uname,
+    password: encryptpwd
+  }
+  setDoc(user, docData)
+  console.log(encryptpwd);
+}
