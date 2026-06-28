@@ -2,7 +2,7 @@ import { getSHA256Hash } from "boring-webcrypto-sha256";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics"; const firebaseConfig = {
 
-  apiKey: "AIzaSyBw3Uh79g_3__fs2LyLNo7Z7dgN7QZYqJs",
+  apiKey: FIREBASE_API,
 
   authDomain: "modos-webos.firebaseapp.com",
 
