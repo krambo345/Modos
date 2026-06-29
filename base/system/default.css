@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 html, body{
     background-color: #1a1a1a;
-    background-image: url("./src/wal/desert.png");
+    background-image: url("/base/user/wal/cambaz.png");
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     font-family: "Fira Code", monospace;
+}
+button:hover{
+    cursor: pointer;
 }
 .bartender{
     display: flex;
@@ -16,21 +19,12 @@ html, body{
     padding-left: 20px;
     padding-right: 20px;
 }
-.clock{
-    line-break:strict;
-    display: flex;
-    padding: 15px;
-    white-space: unset;
-}
-.clockr{
-    padding-left: 5px;
-}
+.clock{}
 .win{
     position: absolute;
     border: solid #fff 5px;
     border-radius: 10px;
     background-color: #1a1a1a9a;
-    padding: 25px;
     width: 400px;
     height: fit-content;
     left: 50%;
@@ -43,7 +37,41 @@ html, body{
     backdrop-filter: blur(0);
     background-color: #1a1a1a;
 }
-
+.winheader{
+    align-items: center;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    display: flex;
+}
+.windowicon{
+    padding: 3px;
+    height: 50%;
+    text-align:left;
+}
+.minimwin{
+    border-radius: 100%;
+    height:20px;
+    width: 20px;
+    background: none;
+    border: none;
+}
+.minimwin:hover{
+    background-color: #d1d100;
+}
+.closewin{
+    border-radius: 100%;
+    height:20px;
+    width: 20px;
+    background: none;
+    border: none;
+}
+.closewin:hover{
+    background-color: #d10000;
+}
+.content{
+    padding: 15px;
+}
 .fira-code {
   font-family: "Fira Code", monospace;
   font-optical-sizing: auto;

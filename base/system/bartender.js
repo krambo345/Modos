@@ -1,15 +1,6 @@
-// system
-
-// window movement
-//    dragElement(document.querySelector(".win"))
-
-//    function dragElement(elmnt) {
-//       var xint=0, yint=0, xcur=0, ycur=0
-//        if (document.querySelector(".winheader")){
-//            document.querySelector()
-//        }
-//    }
-
+// load bartender
+document.querySelector(".bartender").innerHTML += 
+"<div><div class='clockl'><span class='mon'></span><span class='dd'></span></div><div class='clockr'><span class='hh'></span><span class='min'></span></div></div><span class='wttr'></span>"
 // bartender
 // state
 // const dayw = document.querySelector(".ddd")
@@ -53,7 +44,7 @@ async function bartender() {
     }
     const tmp = await wttr.json()
     // Apply Data to bartender
-//    dayw.innerHTML = ofweek[date.getDay()]
+    //    dayw.innerHTML = ofweek[date.getDay()]
     day.innerHTML = ("0" + date.getDate()).slice(-2)
     month.innerHTML = ofyear[date.getMonth()]
     hour.innerHTML = ("0" + date.getHours()).slice(-2) + ":"
