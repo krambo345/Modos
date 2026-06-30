@@ -33,7 +33,7 @@ async function exec(name, icon) {
 }
 async function loadapps() {
     try {
-        const jsonraw = await fetch("/base/system/apps.json")
+        const jsonraw = await fetch("base/system/apps.json")
         if (!jsonraw.ok) {
             throw new Error(`Response status: ${jsonraw.status}`)
         }
