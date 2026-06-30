@@ -1,3 +1,17 @@
 {
-    "Release Notes" : "<h1>Release Notes</h1><p>modOS v0.0.2 is officially out and it is CRAZY!</p>"
+    "App Template": {
+        "visible" : false,
+        "content": "<h1>This is what an app looks like!!!</h1>",
+        "icon": "tools"
+    },
+    "run": {
+        "visible" : true,
+        "content": "<div class=\"content\"><input type=\"text\" placeholder=\"Enter prompt here...\" style=\"width: 90%; margin-bottom: 10px; border: none; border-radius: 5px; background-color: #0077ff; color: #fff;\" id=\"special-input\"><br><button style=\"background-color: #0077ff; color: #fff; border: none; border-radius: 5px;\" onclick=\"const inp = document.getElementById('special-input');const out = document.getElementById('special-output');const ans = eval(inp.value); out.innerHTML=`Output: ${ans}`\">Run</button><span id=\"special-output\" style=\"margin-left: 10px;\">Output:</span></div>",
+        "icon": "cd_drive"
+    },
+    "Release Notes": {
+        "visible" : true,
+        "content": "<h1>Release Notes</h1><p>modOS v0.0.2 is officially out and it is CRAZY!</p>",
+        "icon": "program"
+    }
 }
