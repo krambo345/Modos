@@ -16,3 +16,4 @@ Although the project is supposed to be modular, it is still in early development
 
 ### Citations:
 [Windows 95 Plus 1 Icon Pack - ACONFUSEDDRAGON](https://aconfuseddragon.itch.io/)
+Web earth server tower Icon by Fast Icon Design on [Icon-Icons.com](https://icon-icons.com/authors/27-fast-icon-design)

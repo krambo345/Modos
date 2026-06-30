@@ -1,6 +1,6 @@
 // load bartender
 document.querySelector(".bartender").innerHTML += 
-"<div><div class='clockl'><span class='mon'></span><span class='dd'></span></div><div class='clockr'><span class='hh'></span><span class='min'></span></div></div><span class='wttr'></span>"
+"<div class='clock'><div class='clockl'><span class='mon'></span><span class='dd'></span></div><div class='clockr'><span class='hh'></span><span class='min'></span></div></div><span class='wttr'></span>"
 // bartender
 // state
 // const dayw = document.querySelector(".ddd")

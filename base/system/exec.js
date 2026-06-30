@@ -1,3 +1,4 @@
+const body = document.body
 const desktop = document.querySelector(".desktop")
 const interface = document.querySelector(".interface")
 makeDesktop()
@@ -15,10 +16,9 @@ async function makeDesktop() {
         }
 
     });
-
-
 }
 async function exec(name, icon) {
+    const apps = await loadapps()
     interface.insertAdjacentHTML("beforeend",
         `<div class='win' data-windowname='${name}' data-windowicon='${await identifyicon(name, icon)}'>
         <div class='winheader'>
@@ -26,8 +26,10 @@ async function exec(name, icon) {
         <div class='content'>${await identifycontent(name, icon)}
         </div>
         </div>`)
+    insertScript(apps[name].script)
+    eval(apps[name].command)
     const win = interface.lastElementChild
-    initializewindow(win)
+    initwindow(win)
 }
 async function loadapps() {
     try {
@@ -58,13 +60,18 @@ async function identifycontent(n) {
     }
 }
 let visibility = false
-function showhidden(){
+function showhidden() {
     visibility = true
     makeDesktop()
     return "showing hidden"
 }
-function hidehidden(){
+function hidehidden() {
     visibility = false
     makeDesktop()
     return "hiding hidden"
+}
+function insertScript(s) {
+    const script = document.createElement("script")
+    script.textContent = s
+    document.body.appendChild(script)
 }

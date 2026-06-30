@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 *{
     transition: all 0.5s;
+    scrollbar-width: 50px;
+    scrollbar-color: red;
 }
+
 html, body{
     margin: 0;
     padding: 0;
@@ -11,29 +14,49 @@ html, body{
     background-repeat: no-repeat;
     color: #fff;
     font-family: "Fira Code", monospace;
+    overflow:hidden;
+}
+.interface{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
 }
 button:hover{
     cursor: pointer;
 }
 .bartender{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     background-color: #1a1a1adc;
     backdrop-filter: blur(3px);
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 15px;
 }
 .clock{
+    display: flex;
+    flex-direction: row;
+}
+.clockl *{
+    margin: 3px;
+}
+.clockr{
+    margin-left: 18px;
 }
 .win{
     position: absolute;
     border: solid #0077ff 5px;
     background-color: #ffffff9a;
-    width: fit-content;
-    height: fit-content;
+
+    display: inline-block;
+    width: 800px;
+    min-width: 250px;
+    max-width: 90vw;
+
+    height: auto;
+
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
     backdrop-filter: blur(3px);
     transition: backdrop-filter, background-color 0.4s;
     color: #000;
@@ -76,9 +99,6 @@ button:hover{
 .closewin:hover{
     background-color: #8a0000;
 }
-.content{
-    padding: 15px;
-}
 .winl{
     display: flex;
     justify-content: start;
@@ -94,8 +114,8 @@ button:hover{
 .desktop{
     padding: 8px;
     display: grid;
-    grid-template-columns:90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px 90px;
-    column-gap: 50px;
+    grid-template-columns: repeat(auto-fill 90px);
+    column-gap: 60px;
 }
 .desktop-icon{
     display: flex;
@@ -121,4 +141,26 @@ button:hover{
   font-optical-sizing: auto;
   font-weight: 300px;
   font-style: normal;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(26,26,26,.4);
+    backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#0099ff,#0066ff);
+    border-radius: 999px;
+    border: 2px solid rgba(255,255,255,.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#33aaff,#0088ff);
+}
+* {
+    scrollbar-width: 30px;
+    scrollbar-color: #0077ff transparent;
 }

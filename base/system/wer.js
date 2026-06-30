@@ -57,7 +57,7 @@ function dragElement(element) {
     e.style.zIndex = zlast
   }
 }
-function initializewindow(win){
+function initwindow(win){
   insertFunctions(win)
   dragElement(win)
 }
